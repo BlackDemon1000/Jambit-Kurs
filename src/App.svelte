@@ -1,13 +1,27 @@
 <script>
+  import Name from "./name.svelte";
+  import Nummer from "./Nummer.svelte";
+  import Adresse from "./Adresse.svelte";
+  import Email from "./Email.svelte";
+  import Schule from "./Schule.svelte";
+  import Hallo from "./begüßung.svelte";
 </script>
 
-<h1>Christoph</h1>
+<Name />
+<Nummer />
+<Adresse />
+<Email />
+<Schule name="ich" />
+
+<br />
+<Hallo />
 <br />
 <strong>Alter 15</strong>
 <em>test</em>
 <div>wow</div>
 <a href="google.com">Link</a>
 <br />
+
 <q>Morgen</q>
 <br />
 <hr />
@@ -46,6 +60,7 @@
   scrolling="no"
   allowfullscreen
 />
+<br />
 
 <style>
   h1 {
