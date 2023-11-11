@@ -1,55 +1,46 @@
 <script>
-  import Name from "./name.svelte";
-  import Nummer from "./Nummer.svelte";
-  import Adresse from "./Adresse.svelte";
-  import Email from "./Email.svelte";
-  import Schule from "./Schule.svelte";
-  import Hallo from "./begüßung.svelte";
+    import Name from "./name.svelte";
+    import Nummer from "./Nummer.svelte";
+    import Adresse from "./Adresse.svelte";
+    import Email from "./Email.svelte";
+    import Schule from "./Schule.svelte";
+    import Hallo from "./begüßung.svelte";
+    let counter = 0;
+    let page ="luka";
+    function hallo() {
+        counter =counter+1
+    }
+    function showEmanuel() {page = "Emanuel"}
+    function showChristoph() {page = "Christoph"}
+    function showFelix() {page = "Felix"}
+    /*Kommentar*/
+    
 </script>
 
-<Name />
-<Nummer />
-<Adresse />
-<Email />
-<Schule name="ich" />
+<!--Kommentar-->
 
-<br />
-<Hallo />
-<br />
-<strong>Alter 15</strong>
-<em>test</em>
-<div>wow</div>
-<a href="google.com">Link</a>
-<br />
+<Name/>
+<Nummer/>
+<Email/>
+<Schule/>
+<hr/>
+<button on:click={showEmanuel}>Emanuel</button>
+<button on:click={showChristoph}>Christoph</button>
+<button on:click={showFelix}>Felix</button>
 
-<q>Morgen</q>
-<br />
-<hr />
-<img
-  src="https://www.americanexpress.com/de-de/amexcited/media/cache/default/cms/2022/07/landschaft-slowenien-nationalpark.jpg"
-/>
-<button>Klick hier</button>
-<br />
-<del>Gelöscht halt</del>
-<ins>Gehört auch dazu</ins>
-<br />
-<mark>Hier muss ein Satz rein</mark>
-<input type="text" />
-<br />
-<p id="test">Test</p>
-<a href="amazon.com">
-  <button>Amazon</button>
-</a>
-<br />
-<input type="radio" id="radioid" value="radiowert" name="auswahl" />
-<div>Checkbox</div>
-<input type="checkbox" id="checkboxid" name="checkbox" />
-<br />
+{#if page === "Emanuel"}
+    <div>Hallo ich bin der Emanuel</div>
+{/if}
 
-<select id="selectid" name="dropdown">
-  <option value="1">True</option>
-  <option value="2">False</option>
-</select>
+{#if page === "Christoph"}
+    <div>Hallo ich bin der Christoph</div>
+{/if}
+
+{#if page === "Felix"}
+    <div>Hallo ich bin der Felix</div>
+{/if}
+
+
 
 
 <br />
@@ -67,9 +58,9 @@
     color: blue;
     font-size: 50px;
   }
+  /*Hier auch ein Kommentar*/
   #test {
     color: blue;
   }
 </style>
 
-<iframe src="https://scratch.mit.edu/projects/2569483/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
