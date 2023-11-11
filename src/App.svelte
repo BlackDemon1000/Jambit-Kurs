@@ -1,15 +1,8 @@
 <script>
     let page = "default";
-    let loginsucces = 0;
-    let Usernamecor = 0;
-    export let tempUsername = "default";
-    export let tempPassword = "default";
-    let Usercount = 0;
-    export let currentUser = "Login in to see your Username";
-    const User =[];
-    const Password = [];
-    User[0] = "default";
-    Password[0] = "default";
+    let tempUsername = "default";
+    let tempPassword = "default";
+    let currentUser = "Login in to see your Username";
     function saveUsername() {
         const textInput = document.getElementById('UsernameInput');
         tempUsername = UsernameInput.value;
@@ -18,7 +11,6 @@
     function savePassword() {
         const textInput =document.getElementById('PasswordInput');
         tempPassword = PasswordInput.value;
-    
     }
     function loginButtonclickt() {
         page = "default";
@@ -26,33 +18,10 @@
     function registerButtonclickt() {
         page = "register";
     }
-    function waitforRegisterData() {
-        setTimeout(register, 10);
-    }
-    function waitforLoginData() {
-        setTimeout(login, 10);
-    }
-    function register() {
-        Usercount = Usercount+1;
-        User[Usercount] = tempUsername;
-        Password[Usercount] = tempPassword;
-    }
-    function login() {
-        Usernamecor = 0;
-        for(let i = 0; i < User.length; i++) {
-            if ((User[i]) == tempUsername){
-                Usernamecor = 1;
-            }
-        }
-        for(let i = 0; i < Password.length; i++) {
-            if ((Password[i]) == tempPassword && Usernamecor == 1) {
-                page = "loggedIn";
-        }
-    }
- 
-    User[0] = "default"
-<script/>
     /*Kommentar*/
+    
+</script>
+
 <!--default header page-->
     <button on:click={loginButtonclickt}>Login</button>
     <button on:click={registerButtonclickt}>Register</button>
@@ -77,11 +46,11 @@
     <div>Password:</div>
     <input type="text" id="PasswordInput">
     <br/>
-    <button on:click={saveUsername && waitforRegisterData}>Register</button>
+    <button on:click={saveUsername}>Register</button>
     <hr/>
 {/if}
 
-{#if page === "LoggedIn"}
+{#if page === "LogedIn"}
     <h1>Loged In succesfully with Username {currentUser}</h1>
 {/if}
 
@@ -98,4 +67,3 @@
     margin-left: 300px;
   }
 </style>
-
