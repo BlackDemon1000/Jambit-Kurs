@@ -1,44 +1,30 @@
 <script>
-    import Name from "./name.svelte";
-    import Nummer from "./Nummer.svelte";
-    import Adresse from "./Adresse.svelte";
-    import Email from "./Email.svelte";
-    import Schule from "./Schule.svelte";
-    import Hallo from "./begüßung.svelte";
-    let counter = 0;
-    let page ="luka";
-    function hallo() {
-        counter =counter+1
+    let page = "default";
+    let tempUsername = "default";
+    let tempPassword = "default";
+    function saveText() {
+        const textInput = document.getElementById('UsernameInput');
+        tempUsername = UsernameInput.value;
     }
-    function showEmanuel() {page = "Emanuel"}
-    function showChristoph() {page = "Christoph"}
-    function showFelix() {page = "Felix"}
     /*Kommentar*/
     
 </script>
 
 <!--Kommentar-->
-
-<Name/>
-<Nummer/>
-<Email/>
-<Schule/>
-<hr/>
-<button on:click={showEmanuel}>Emanuel</button>
-<button on:click={showChristoph}>Christoph</button>
-<button on:click={showFelix}>Felix</button>
-
-{#if page === "Emanuel"}
-    <div>Hallo ich bin der Emanuel</div>
+{#if page === "default"}
+    <div>Username:</div>
+    <input type="text" id="UsernameInput">
+    <div>Password:</div>
+    <input type="text" id="PasswordInput">
+    <br/>
+    <button on:click={saveText}>Speichern</button>
+    <hr/>
+    <div>Du hast {tempUsername} gespeichert</div>
+    <div>Du hast {tempPassword} gespeichert</div>
 {/if}
 
-{#if page === "Christoph"}
-    <div>Hallo ich bin der Christoph</div>
-{/if}
 
-{#if page === "Felix"}
-    <div>Hallo ich bin der Felix</div>
-{/if}
+
 
 
 
