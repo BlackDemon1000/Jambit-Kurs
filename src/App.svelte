@@ -1,17 +1,18 @@
 <script>
-  import Name from "./name.svelte";
-  import Nummer from "./Nummer.svelte";
-  import Adresse from "./Adresse.svelte";
-  import Email from "./Email.svelte";
-  import Schule from "./Schule.svelte";
-  import Hallo from "./begüßung.svelte";
+    import Name from "./name.svelte";
+    import Nummer from "./Nummer.svelte";
+    import Adresse from "./Adresse.svelte";
+    import Email from "./Email.svelte";
+    import Schule from "./Schule.svelte";
+    import Hallo from "./begüßung.svelte";
+    let counter = 0;
+    function hallo() {
+        counter =counter+1
+    }
+    
 </script>
 
-<Name />
-<Nummer />
-<Adresse />
-<Email />
-<Schule name="ich" />
+
 
 <br />
 <Hallo />
@@ -24,10 +25,11 @@
 
 <q>Morgen</q>
 <br />
+<hr/>
+<button on:click={hallo}>Hallo</button>
+<div>{counter} Haben Hallo gesagt</div>
 <hr />
-<img
-  src="https://www.americanexpress.com/de-de/amexcited/media/cache/default/cms/2022/07/landschaft-slowenien-nationalpark.jpg"
-/>
+
 <button>Klick hier</button>
 <br />
 <del>Gelöscht halt</del>
