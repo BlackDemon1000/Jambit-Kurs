@@ -1,8 +1,8 @@
 <script>
     let page = "default";
-    let tempUsername = "default";
-    let tempPassword = "default";
-    let currentUser = "Login in to see your Username";
+    export let tempUsername = "default";
+    export let tempPassword = "default";
+    export let currentUser = "Login in to see your Username";
     function saveUsername() {
         const textInput = document.getElementById('UsernameInput');
         tempUsername = UsernameInput.value;
