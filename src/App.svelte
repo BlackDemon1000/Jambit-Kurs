@@ -2,9 +2,14 @@
     let page = "default";
     let tempUsername = "default";
     let tempPassword = "default";
-    function saveText() {
+    function saveUsername() {
         const textInput = document.getElementById('UsernameInput');
         tempUsername = UsernameInput.value;
+        savePassword();
+    }
+    function savePassword() {
+        const textInput =document.getElementById('PasswordInput');
+        tempPassword = PasswordInput.value;
     }
     /*Kommentar*/
     
@@ -17,7 +22,7 @@
     <div>Password:</div>
     <input type="text" id="PasswordInput">
     <br/>
-    <button on:click={saveText}>Speichern</button>
+    <button on:click={saveUsername}>Speichern</button>
     <hr/>
     <div>Du hast {tempUsername} gespeichert</div>
     <div>Du hast {tempPassword} gespeichert</div>
