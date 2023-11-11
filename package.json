@@ -1,5 +1,13 @@
 {
+  "name": "svelte-battleship",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "start": "svelte-kit start"
+  },
   "devDependencies": {
+    "@sveltejs/kit": "^1.27.4",
     "@sveltejs/vite-plugin-svelte": "^2.5.2"
   }
 }
