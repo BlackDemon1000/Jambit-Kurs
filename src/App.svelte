@@ -18,6 +18,7 @@
     function registerButtonclickt() {
         page = "register";
     }
+    
     /*Kommentar*/
     
 </script>
